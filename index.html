@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador CPF e CNPJ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="inicio" class="conteudo">   
+        <div class="conteudo-principal">
+            <head class="header">
+                <ul class="links-Internos">
+                    <li ><a class="link" href="#area-cpf">Gerador de CPF</a></li>
+                    <li ><a class="link" href="#area-cnpj">Gerador de CNPJ</a></li>
+                </ul>
+            </head>
+            <div class="descricao">
+                <div class="descicao-texto">
+                    <h1>Gerador de CPF e CNPJ</h1>
+                    <p>
+                        Gere números de CPF e CNPJ válidos de forma rápida, fácil e 
+                        gratuita! Ideal para desenvolvedores, estudantes e 
+                        profissionais de TI que precisam de documentos fictícios 
+                        para testes de sistemas, formulários, cadastros ou validação 
+                        de algoritmos. Os números gerados seguem as regras de 
+                        formação e dígito verificador da Receita Federal, mas não 
+                        correspondem a documentos reais.
+                    </p>
+                </div>
+                <img class="descricao-imagem" src="imgs/cpf.jpeg" alt="">
+            </div>   
+        </div>
+        <div class="Gerador-cpf">
+            <div id="area-cpf" class="conteudo-segundario">
+                <h1>Gerador de CPF</h1>
+                <div class="alinhar">                    
+                    <div class="estado mostrarEstados" >
+                        <select id="pesquisarEstado" onclick="selecionarEstado()">
+                            <option value="">Selecione um estado...</option>
+                            <option value="rs">rio grande do sul</option>
+                            <option value="df">distrito federal</option>
+                            <option value="go">goiás</option>
+                            <option value="mt">mato grosso</option>
+                            <option value="ms">mato grosso do sul</option>
+                            <option value="to">tocantins</option>
+                            <option value="am">amazonas</option>
+                            <option value="pa">pará</option>
+                            <option value="rr">roraima</option>
+                            <option value="ap">amapá</option>
+                            <option value="ac">acre</option>
+                            <option value="ro">rondônia</option>
+                            <option value="ce">ceará</option>
+                            <option value="ma">maranhão</option>
+                            <option value="pi">piauí</option>
+                            <option value="pb">paraíba</option>
+                            <option value="pe">pernambuco</option>
+                            <option value="al">alagoas</option>
+                            <option value="rn">rio grande do norte</option>
+                            <option value="ba">bahia</option>
+                            <option value="se">sergipe</option>
+                            <option value="mg">minas gerais</option>
+                            <option value="rj">rio de janeiro</option>
+                            <option value="es">espírito santo</option>
+                            <option value="sp">são paulo</option>
+                            <option value="pr">paraná</option>
+                            <option value="sc">santa catarina</option>
+                            <option value="sc">Estado aleatório</option>
+                        </select>
+                    </div>
+                </div>
+                <h2 class="pergunta">Gerar CPF com pontuação?</h2>
+                <div class="alinhar">
+                    <input class = "opcoes-confirmacao" type="radio" name="opcoes-cpf" id="opcao-cpf-sim">
+                    <label for="opcao-cpf-sim">sim</label>
+                    <input class = "opcoes-confirmacao" type="radio" name="opcoes-cpf" id="opcao-cpf-nao">
+                    <label for="opcao-cpf-sim">não</label>
+                </div>
+                <span class="resultado-cpf">213123123</span>
+                <div class="alinhar">
+                    <button onclick="Gerar(),movimetar('#gerar')"id="gerar" class=" opcoes-gerador1 opcoes-gerador"><img class="icon" src="imgs/reciclar.png" alt=""> gerar outro CPF</button>
+                    <button onclick="movimetar('#copiar')" id="copiar" class="opcoes-gerador"><img src="" alt=""> copiar</button>
+                </div>
+                <button class="voltarInicio"><a class="voltarInicioLink" href="#inicio">Inicio</a></button>
+                <img class="imagemCpf" src="/imgs/pngCpf.png" alt="">
+            </div>
+            <span class="linha"></span>
+            <div  id="area-cnpj" class="conteudo-segundario">
+                <h1>Gerador de CNPJ</h1>
+                <h2 class="pergunta">Gerar CNPJ com pontuação?</h2>
+                <div class="alinhar">
+                    <input class = "opcoes-confirmacao" type="radio" name="opcoes-cnpj" id="opcao-cnpj-sim">
+                    <label for="opcao-cnpj-sim">sim</label>
+                    <input class = "opcoes-confirmacao" type="radio" name="opcoes-cnpj" id="opcao-cnpj-nao">
+                    <label for="opcao-cnpj-sim">não</label>
+                </div>
+                <span class="resultado-cnpj">213123123</span>
+                <div class="alinhar">
+                    <button onclick="GerarCNPj(),movimetar('#gerarcnpj')"id="gerarcnpj" class=" opcoes-gerador1 opcoes-gerador"><img class="icon" src="imgs/reciclar.png" alt=""> gerar outro CNPJ</button>
+                    <button onclick="movimetar('#copiarcnpj')" id="copiarcnpj" class="opcoes-gerador"><img src="" alt=""> copiar</button>
+                </div>
+                <button class="voltarInicio"><a class="voltarInicioLink" href="#inicio">Inicio</a></button>
+                <img class="imagemCnpj" src="/imgs/pngCnpj.png" alt="">
+            </div>
+        </div>
+    </div>
+    <footer class="rodape"> 
+         <p>© 2025 Brendon Sobral Matias — </p>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>

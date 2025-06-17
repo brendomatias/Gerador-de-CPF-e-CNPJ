@@ -1,0 +1,278 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100vw;
+    background: linear-gradient(to top left,rgb(192, 0, 250),rgb(119, 6, 194));
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,p,a{
+    padding: 0;
+    margin: 0;
+}
+
+
+.conteudo{
+    display: grid;
+    gap: 10rem;
+    .conteudo-principal{
+        width: 50vw;
+        margin: auto;
+        display: grid;
+        gap: 5rem;
+        justify-content: center;
+
+        .links-Internos{
+            display: flex;
+            gap: 5rem;
+            padding-top: 5rem;
+            justify-content: center;
+
+            .link{
+                font-size: 1.5rem;
+                color: white;
+                padding-bottom: 0.3rem;
+                position: relative;
+                padding: 1rem 0.5rem;
+            }
+            .link::before{
+                content: "";
+                width: 0rem;
+                height: 0.1rem;
+                background-color: white;
+                position: absolute;
+                left: 50%;
+                bottom: -0.3rem;
+                transition: 0.2s;
+            }
+            .link:hover::before{
+                width: 100%;
+                left: 0%;
+            }
+        }
+
+        .descricao{
+            display: flex;
+            color: white;
+            gap: 1.5rem;
+            .descicao-texto{
+                margin: auto 0;
+                
+                p{  
+                    font-size: 1.3rem;
+                }
+            }
+            .descricao-imagem{
+                width: 60rem;
+                height: 18rem;
+                object-fit: cover;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+
+}
+
+.Gerador-cpf{
+    width: 100dvw;
+    background-color: rgb(39, 39, 39);
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 6rem;
+
+    .conteudo-segundario{
+        width: 50vw;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        color: white;
+        gap: 1.3rem;
+        padding: 5rem;
+        position: relative;
+
+        h1{
+            font-size: 2.5rem;
+        }
+
+        .alinhar{
+            display: flex;
+            gap: 1rem;
+        }
+        .estado,.opcoes-gerador{
+            background: linear-gradient(rgb(192, 0, 250),rgb(119, 6, 194));
+            padding: 0.5rem 0.5rem;
+            border: solid 0.1rem black;
+            border-radius: 0.5rem;
+            color: white;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+        .opcoes-confirmacao{
+            transform: scale(1.5);
+            accent-color: rgb(191, 0, 216);
+            cursor: pointer;
+        }
+        .resultado-cpf,.resultado-cnpj{
+            background: linear-gradient(to left top,rgb(0, 0, 0),rgb(0, 0, 0));
+            padding: 1rem 0.5rem;
+            border: solid 0.1rem black;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            
+        }
+        
+        .opcoes-gerador:hover{
+            border-color: white;
+            cursor: pointer;
+        }
+        
+        .opcoes-gerador1{
+            display: flex;
+            gap:  0.5rem;
+            justify-content: center;
+            align-items: center;
+            line-height: 3;
+            .icon{
+                width: 1.5rem;
+                height: 1.5rem;
+                transition: 0.3s;
+            }
+        }
+        .opcoes-gerador1:hover{
+            .icon{
+                transform: rotate(180deg);
+            }
+        }
+        #pesquisarEstado{
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        #pesquisarEstado::placeholder{
+            color: rgb(192, 192, 192);
+        }
+
+        #estadoSelecionado{
+            padding: auto;
+            line-height: 2;
+            cursor: default;
+        }
+        .mostrarEstados{
+            display: flex;
+            justify-content: center;
+            border: solid black 1px;
+
+            .butaoEnviar{
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                .iconEnviar{
+                    width: 1.5rem;
+                    transform: rotateZ(45deg);
+                }
+            }
+        }
+        .mostrarEstados:hover{
+            border-color: white;
+        }
+        
+        
+    }
+  
+}
+
+.rodape{
+    background-color: black;
+    padding: 2.5rem 0;
+    display: grid;
+    justify-content: center;
+
+    p{
+        color: white;
+    }
+}
+
+.linha{
+    width: 50rem;   
+    height: 0.165rem;
+    background-color: rgb(255, 255, 255);
+}
+
+
+#area-cnpj{
+    padding-bottom: 15rem;
+}
+
+.pergunta{
+    color: rgb(124, 124, 124);
+}
+
+
+.imagemCpf{
+    position: absolute;
+    right: -28%;
+    bottom: 2rem;
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+.imagemCnpj{
+    position: absolute;
+    left: -40%;
+    bottom: -6rem;
+    border-radius: 1rem;
+}
+#area-cnpj::before{
+    content: "";
+    display: block;
+    width: 30rem;
+    height: 12rem;
+    background-color: blueviolet;
+    position: absolute;
+    left: -36%;
+    bottom: 0rem;
+    border-top-right-radius: 2rem;
+}
+#area-cpf::before{
+    content: "";
+    display: block;
+    width: 30rem;
+    height: 9rem;
+    background-color: blueviolet;
+    position: absolute;
+    right: -36%;
+    bottom: 1.3rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+
+.voltarInicio{
+    background: linear-gradient(to top left,rgb(192, 0, 250),rgb(119, 6, 194));
+    border: 0.1rem solid black;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.voltarInicio:hover{
+    border-color: white;
+
+}
+.voltarInicioLink{
+    color: white;
+}
