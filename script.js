@@ -214,6 +214,17 @@ function atualizarSiteCnpj(){
     document.querySelector(".resultado-cnpj").innerHTML = cnpjAtual;
 }
 
+function copiar(texto){
+    const span = document.querySelector(`.${texto}`);
+    const textoTemporario = document.createElement("textarea");
+    textoTemporario.value = span.textContent;
+    textoTemporario.style.position ="fixed";
+    textoTemporario.style.left ="-99999rem";
+    document.body.appendChild(textoTemporario)
+    textoTemporario.select();
+    document.execCommand('copy')
+    document.body.removeChild(textoTemporario)
+}
 
 
 function GerarCNPj(){
