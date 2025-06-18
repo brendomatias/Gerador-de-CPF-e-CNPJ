@@ -387,10 +387,10 @@ h1,h2,h3,p,a{
     .conteudo-segundario{
         gap: 1rem;
         h1{
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
         h2{
-            font-size: 1.1rem;
+            font-size: 0.5rem;
         }
         .estado,.opcoes-gerador{
             font-size: 1rem;
@@ -411,32 +411,35 @@ h1,h2,h3,p,a{
   
 }
     .linha{
-    width: 25em;   
+    width: 15em;   
     height: 0.165rem;
     background-color: rgb(255, 255, 255);
     }
     .imagemCpf{
-        right: -14%;
-        width: 6rem;
+        display: none;
     }
     .imagemCnpj{
-        width: 9rem;
-        left: -17%;
-        bottom: -1rem;
-
+        display: none;
     }
     #area-cnpj::before{
-        width: 14rem;
-        height: 3rem;
+        display: none;
     }
     #area-cpf::before{
-        width: 7rem;
-        height: 3rem;
-        right: -14%;
+        display: none;
     }
 
     .voltarInicio{
         padding: 0.5rem 1rem;
     }
+    .opcoes-gerador1,.opcoes-gerador{
+        p{
+            font-size: 0.6rem;
+        }
+    }
+
+.icon{
+    width: 1rem !important;
+    height: 1rem !important;
+}
 }
 
